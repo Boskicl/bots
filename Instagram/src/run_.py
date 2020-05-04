@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
+import os
 
 class InstaBot:
     def __init__(self,username,passwrd):
@@ -52,7 +53,7 @@ class InstaBot:
         driver = self.driver
         driver.get('{}/{}/'.format(self.url,person))
 
-    def like(self,amount):
+    def Like(self,amount):
 #            """
 #            Send a like on Instagram picture(s)
 #            ...
@@ -80,7 +81,7 @@ class InstaBot:
             sleep(1)
             driver.find_element_by_class_name('fr66n').click()
 
-    def comment(self,text,amount):
+    def Comment(self,text,amount):
 #            """
 #            Send a comment on Instagram picture(s)
 #            ...
@@ -148,11 +149,35 @@ class InstaBot:
                 driver.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
                 sleep(1)
                 i += 1
-amount = 2 # Amount of Likes/comments to give
 
-insta = InstaBot('usrn', 'pswrd')
-insta.login()
-insta.findfollower('ljubeb')
-#insta.like(amount) 
-#insta.comment('Nice picture!',amount) 
-insta.like_comment_multi('Nice picture!',amount) 
+if __name__ == '__main__':
+
+    person = str(input('Input the username of the person who you like to find: '))
+    What = str(input('Would you like to Like (L), Comment (C) or Both (B)?: ').lower())
+
+    if What == 'l' or What == 'c' or What == 'b':
+        pass
+    else: 
+        print('Sorry not valid input.') 
+    
+    if What == 'l':
+        amount = int(input('How many photos do you want to like? '))
+        insta = InstaBot('usr', 'pas')
+        insta.login()
+        insta.findfollower(person)
+        insta.Like(amount)
+    elif What == 'c':
+        comment = str(input('What would you like to comment? '))
+        amount = int(input('How many photos do you want to commant that on? '))
+        insta = InstaBot('usr', 'pas')
+        insta.login()
+        insta.findfollower(person)
+        insta.Comment(comment,amount)
+    elif What == 'b':
+        amount = int(input('How many photos do you want to like and comment on? '))
+        comment = str(input('What would you like to comment? '))
+        insta = InstaBot('usr', 'pas')
+        insta.login()
+        insta.findfollower(person)
+        insta.like_comment_multi(comment,amount)
+
