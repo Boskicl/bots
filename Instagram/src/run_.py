@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 import os
+import getpass
 
 class InstaBot:
     def __init__(self,username,passwrd):
@@ -152,9 +153,9 @@ class InstaBot:
 
 if __name__ == '__main__':
 
-    usr = str(input('What is your Instagram username? (case sensitive)'))
-    paswrd = str(input('What is your Instagram password (case sensitive'))
-    
+    usr = str(input('What is your Instagram username? (case sensitive): '))
+    paswrd = getpass.getpass(prompt='What is your Instagram password (case sensitive): ', stream=None)
+
     person = str(input('Input the username of the person who you like to find: '))
     What = str(input('Would you like to Like (L), Comment (C) or Both (B)?: ').lower())
 
