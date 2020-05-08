@@ -154,7 +154,6 @@ if __name__ == '__main__':
 
     usr = str(input('What is your Instagram username? (case sensitive)'))
     paswrd = str(input('What is your Instagram password (case sensitive'))
-    insta = InstaBot(usr, paswrd)
     
     person = str(input('Input the username of the person who you like to find: '))
     What = str(input('Would you like to Like (L), Comment (C) or Both (B)?: ').lower())
@@ -166,18 +165,21 @@ if __name__ == '__main__':
     
     if What == 'l':
         amount = int(input('How many photos do you want to like? '))
+        insta = InstaBot(usr, paswrd)
         insta.login()
         insta.findfollower(person)
         insta.Like(amount)
     elif What == 'c':
         comment = str(input('What would you like to comment? '))
         amount = int(input('How many photos do you want to commant that on? '))
+        insta = InstaBot(usr, paswrd)
         insta.login()
         insta.findfollower(person)
         insta.Comment(comment,amount)
     elif What == 'b':
         amount = int(input('How many photos do you want to like and comment on? '))
         comment = str(input('What would you like to comment? '))
+        insta = InstaBot(usr, paswrd)
         insta.login()
         insta.findfollower(person)
         insta.like_comment_multi(comment,amount)
