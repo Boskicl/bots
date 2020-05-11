@@ -1,11 +1,18 @@
 # Directory Tree
 
 ```bash
-├───Facebook
-│   └───src
-├───Instagram
-│   └───src
-└───Stock Scraping
+├── Facebook
+│   ├── requirements.txt
+│   └── src
+│       └── run_.py
+├── Instagram
+│   ├── requirements.txt
+│   └── src
+│       └── run_.py
+├── README.md
+└── Stock\ Scraping
+    ├── out.json
+    └── run_.py
 ```
 # Bots
 Creation of bots for fun, interactive projects.
