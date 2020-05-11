@@ -113,10 +113,17 @@ class FaceBot:
             act.perform()
 
 
-face = FaceBot(username, passwrd)
-face.login()            # Login works
-face.Events()           # Direct to Events
-face.Birthdays()        # Working on - Go to Birthdays and post Happy Bday
+# face = FaceBot(username, passwrd)
+# face.login()            # Login works
+# face.Events()           # Direct to Events
+# face.Birthdays()        # Working on - Go to Birthdays and post Happy Bday
  
+if __name__ == '__main__':
 
+    usr = str(input('What is your Facebook username? (case sensitive): '))
+    paswrd = getpass.getpass(prompt='What is your Facebook password (case sensitive): ', stream=None)
+
+    face = FaceBot(usr,paswrd)
+    face.login() 
+    face.Events()
 
