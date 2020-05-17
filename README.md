@@ -20,7 +20,7 @@
         run_.py
 ```
 # Bots
-Creation of bots for fun, interactive projects.
+Creation of bots for fun, interactive projects. All of these bots created are designed to be safe and protect you from having your information stolen. Bots should be run locally on your machine, passwords are protected and never displayed on screen or on the terminal window.
 
 ### Instagram bot
   - Log into a profile you specify
