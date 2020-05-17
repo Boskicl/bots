@@ -1,18 +1,23 @@
 # Directory Tree
 
 ```bash
-├── Facebook
-│   ├── requirements.txt
-│   └── src
-│       └── run_.py
-├── Instagram
-│   ├── requirements.txt
-│   └── src
-│       └── run_.py
-├── README.md
-└── Stock\ Scraping
-    ├── out.json
-    └── run_.py
+│   .travis.yml
+│   README.md
+
+├───Facebook
+│   │   requirements.txt
+│   │
+│   └───src
+│           run_.py
+│
+├───Instagram
+│   │   requirements.txt
+│   │
+│   └───src
+│           run_.py
+│
+└───Stock Scraping
+        run_.py
 ```
 # Bots
 Creation of bots for fun, interactive projects.
