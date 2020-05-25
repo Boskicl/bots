@@ -10,7 +10,7 @@ class InstaBot:
         self.username   = username
         self.password   = passwrd
         self.url        = 'https://instagram.com'
-        self.driver     = webdriver.Chrome("/home/travis/virtualenv/python3.6.7/bin/chromedriver")
+        self.driver     = webdriver.Chrome()
 
     def login(self):
         driver = self.driver
