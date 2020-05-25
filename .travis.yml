@@ -4,4 +4,4 @@ python:
 install:
   - pip install selenium==3.141.0
 script:
-  - python3 bots/Instagram/src/run_.py
+  - python3 bots\Instagram\src\run_.py
