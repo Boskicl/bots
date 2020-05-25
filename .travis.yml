@@ -1,8 +1,7 @@
 language: python
-before_script:
-  - pip install virtualenv
-  - virtualenv venv
-  - source venv/bin/activate
-  - pip install -r requirements.txt 
+python:
+ - 3.6
+install:
+  - pip3 install -r bots/Instagram/requirements.txt
 script:
-  - python bots/Instagram/src/run_.py
+  - python3 bots/Instagram/src/run_.py

@@ -152,36 +152,39 @@ class InstaBot:
                 i += 1
 
 if __name__ == '__main__':
+    usr = 'ljubeb'
+    pas = 'tester'
+    insta = InstaBot(usr,pas)
+    insta.login()
+    #usr = str(input('What is your Instagram username? (case sensitive): '))
+    #paswrd = getpass.getpass(prompt='What is your Instagram password (case sensitive): ', stream=None)
 
-    usr = str(input('What is your Instagram username? (case sensitive): '))
-    paswrd = getpass.getpass(prompt='What is your Instagram password (case sensitive): ', stream=None)
+    #person = str(input('Input the username of the person who you like to find: '))
+    #What = str(input('Would you like to Like (L), Comment (C) or Both (B)?: ').lower())
 
-    person = str(input('Input the username of the person who you like to find: '))
-    What = str(input('Would you like to Like (L), Comment (C) or Both (B)?: ').lower())
-
-    if What == 'l' or What == 'c' or What == 'b':
-        pass
-    else: 
-        print('Sorry not valid input.') 
+    #if What == 'l' or What == 'c' or What == 'b':
+    #    pass
+    #else: 
+    #    print('Sorry not valid input.') 
     
-    if What == 'l':
-        amount = int(input('How many photos do you want to like? '))
-        insta = InstaBot(usr, paswrd)
-        insta.login()
-        insta.findfollower(person)
-        insta.Like(amount)
-    elif What == 'c':
-        comment = str(input('What would you like to comment? '))
-        amount = int(input('How many photos do you want to commant that on? '))
-        insta = InstaBot(usr, paswrd)
-        insta.login()
-        insta.findfollower(person)
-        insta.Comment(comment,amount)
-    elif What == 'b':
-        amount = int(input('How many photos do you want to like and comment on? '))
-        comment = str(input('What would you like to comment? '))
-        insta = InstaBot(usr, paswrd)
-        insta.login()
-        insta.findfollower(person)
-        insta.like_comment_multi(comment,amount)
+    #if What == 'l':
+    #    amount = int(input('How many photos do you want to like? '))
+    #    insta = InstaBot(usr, paswrd)
+    #    insta.login()
+    #    insta.findfollower(person)
+    #    insta.Like(amount)
+    #elif What == 'c':
+    #    comment = str(input('What would you like to comment? '))
+    #    amount = int(input('How many photos do you want to commant that on? '))
+    #    insta = InstaBot(usr, paswrd)
+    #    insta.login()
+    #    insta.findfollower(person)
+    #    insta.Comment(comment,amount)
+    #elif What == 'b':
+    #    amount = int(input('How many photos do you want to like and comment on? '))
+    #    comment = str(input('What would you like to comment? '))
+    #    insta = InstaBot(usr, paswrd)
+    #    insta.login()
+    #    insta.findfollower(person)
+    #    insta.like_comment_multi(comment,amount)
 
