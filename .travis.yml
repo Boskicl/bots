@@ -3,5 +3,9 @@ python:
  - 3.6
 install:
   - pip install selenium==3.141.0
+before_script:
+ - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
+ - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python2.7.12/bin/
+ - export CHROME_BIN=chromium-browser
 script:
-  - python bots/Instagram/src/run_.py
+  - python run_.py
